@@ -1,0 +1,26 @@
+{
+  "name": "rogerroger",
+  "version": "1.0.0",
+  "description": "Twitter + crypto bot for discord",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oooyeee/rogerroger.git"
+  },
+  "author": "Yaroslav Minakov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oooyeee/rogerroger/issues"
+  },
+  "homepage": "https://github.com/oooyeee/rogerroger#readme",
+  "dependencies": {
+    "discord.js": "^13.8.0"
+  }
+}

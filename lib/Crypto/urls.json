@@ -1,5 +1,3 @@
 {
-    "urls": {
-        "cointicker": "https://api.livecoinwatch.com/coins/single"
-    }
+    "cointicker": "https://api.livecoinwatch.com/coins/single"
 }

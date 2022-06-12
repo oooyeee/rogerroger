@@ -83,6 +83,19 @@ let matches = subs["from:eee"].channels.reduce((arr, item) => {
 console.log(matches);
 
 
+let kek = {
+    "111": 111,
+    "222": 222
+}
+
+let woof = {}
+
+console.log(!(kek["333"]) ? "does not exist" : "exists");
+console.log(true ? "does not exist" : "exists");
+
+console.log(Object.keys(woof).length);
+
+
 
 
 

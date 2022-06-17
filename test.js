@@ -1,4 +1,6 @@
 import { EventEmitter } from "events"
+import fs from "fs"
+import { randomUUID } from "crypto"
 
 // class Kek extends EventEmitter {
 //     constructor() {
@@ -94,6 +96,20 @@ console.log(!(kek["333"]) ? "does not exist" : "exists");
 console.log(true ? "does not exist" : "exists");
 
 console.log(Object.keys(woof).length);
+
+let picurl = "https://cdn.discordapp.com/attachments/842314801153703976/987129418059235338/template.png";
+
+let response = await fetch(picurl, {
+    method: "GET"
+}).then(res => res.arrayBuffer());
+
+let file = Buffer.from(response)
+
+console.log(":: BODY ::");
+// console.log(file);
+
+fs.writeFileSync("./" + randomUUID() + "_image.png", file, { flag: "w" })
+
 
 
 

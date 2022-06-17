@@ -11,7 +11,7 @@ const GuildTextBasedChannel = require("discord.js").GuildTextBasedChannel;
 const name = "sub_twitter_here";
 
 let stream = new TweetsStream(keys.twitter_bearer_token);
-await stream.AddRules({ values: [rules.oooyeee, rules.musk] })
+await stream.addRules({ values: [rules.oooyeee, rules.musk] })
 await stream.init();
 
 const command = {
@@ -47,7 +47,7 @@ class Subs {
 
     async addSub(ruleValue, channel) {
 
-        let [success, json] = await stream.AddRules({ value: ruleValue });
+        let [success, json] = await stream.addRules({ value: ruleValue });
         if (!success) {
             return "rule is invalid"
         }
@@ -94,7 +94,7 @@ class Subs {
                 );
                 if (this.#subs[ruleValue].channels.length == 0) {
                     delete this.#subs[ruleValue];
-                    let [success, json] = await stream.DeleteRule(ruleValue);
+                    let [success, json] = await stream.deleteRule(ruleValue);
                     // console.log("== DELETE TWITTER RULE RESULT ==");
                     // console.log(json);
                 }
